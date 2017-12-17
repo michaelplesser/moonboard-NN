@@ -12,7 +12,7 @@ def loaddata():
 
 	# Load data
 	loaddata   = np.loadtxt("/home/michael/Documents/Code/Python/moonboard/climbs.txt")
-	grades     = np.loadtxt("/home/michael/Documents/Code/Python/moonboard/grades.txt"  )
+	grades     = np.loadtxt("/home/michael/Documents/Code/Python/moonboard/grades.txt")
 	nproblems  = np.shape(grades)[0]
 
 	# Checks to ensure there are as many problems as grades
@@ -22,7 +22,6 @@ def loaddata():
 
 	# Reshapes data into (nproblems) vectors of length (1, nholds)
 	data = []
-
 	for i in xrange(nproblems):
 		problemi = loaddata[i*rows:(i+1)*rows][:].reshape(1,nholds)[0].tolist()
 		if grades[i] >=low_grade and grades[i]<=high_grade: # Only look at problems in some range
@@ -34,7 +33,6 @@ def loaddata():
 	return data, grades
 
 def main():
-	# Moonboard features
 	global rows, cols, nholds
 	global low_grade, high_grade
 
