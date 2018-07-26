@@ -1,4 +1,7 @@
 # moonboard-NN
+
+Very out of date: under maintenance
+
 Simple neural network to grade Moonboard boulder problems
 
 The names data file is .npy instead of .txt because it contains unicode characters.                      
